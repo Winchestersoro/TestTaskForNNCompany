@@ -1,0 +1,9 @@
+.loader {
+  text-align: center;
+  padding: 2rem;
+}
+
+.loaderText {
+  font-size: 1.2rem;
+  color: #555;
+}
