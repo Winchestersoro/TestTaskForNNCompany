@@ -6,7 +6,6 @@ import type { User } from "./components/UserTable";
 import "./App.css";
 
 function App() {
-
   const [filtered, setFiltered] = React.useState<User[]>([]);
   const [loading, setLoading] = React.useState(true);
 
@@ -30,7 +29,7 @@ function App() {
       return;
     }
     setFiltered(
-      allUsers.current.filter((u) =>
+      allUsers.current.filter((u: User) =>
         `${u.name.first} ${u.name.last}`.toLowerCase().includes(v)
       )
     );
@@ -41,7 +40,7 @@ function App() {
   };
 
   return (
-    <div style={{ maxWidth: 900, margin: "2rem auto", padding: "1rem" }}>
+    <div className="app-container">
       <h1>Таблица пользователей</h1>
       <UserFilter onFilter={handleFilter} onReset={handleReset} />
       {loading ? <Loader /> : <UserTable users={filtered} />}

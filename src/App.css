@@ -1,4 +1,10 @@
 
+.app-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
 :root {
   color-scheme: only light;
 }
