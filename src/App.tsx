@@ -43,7 +43,9 @@ function App() {
     <div className="app-container">
       <h1>Таблица пользователей</h1>
       <UserFilter onFilter={handleFilter} onReset={handleReset} />
-      {loading ? <Loader /> : <UserTable users={filtered} />}
+      <div className="table-wrapper">
+        {loading ? <Loader /> : <UserTable users={filtered} />}
+      </div>
     </div>
   );
 }

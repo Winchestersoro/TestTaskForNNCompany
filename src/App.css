@@ -1,8 +1,14 @@
 
 .app-container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 2rem auto;
-  padding: 1rem;
+  padding: 2rem 1rem 1rem 1rem;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(60,60,100,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 :root {
@@ -19,11 +25,12 @@ body {
 }
 
 h1 {
-  text-align: center;
+  text-align: left;
   font-size: 2.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   color: #222;
   letter-spacing: 1px;
+  font-weight: 700;
 }
 
 #root {
@@ -37,38 +44,15 @@ h1 {
 }
 
 input[type="text"] {
-  border: 1px solid #d0d0e0;
-  border-radius: 8px;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  transition: border-color 0.2s;
-  outline: none;
-  background: #fafaff;
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 1rem;
 }
-input[type="text"]:focus {
-  border-color: #646cff;
-}
-
-button {
-  background: linear-gradient(90deg, #646cff 0%, #4f8cff 100%);
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 0.5rem 1.2rem;
-  font-size: 1rem;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(100,108,255,0.08);
-  transition: background 0.2s, box-shadow 0.2s;
-}
-button:hover {
-  background: linear-gradient(90deg, #4f8cff 0%, #646cff 100%);
-  box-shadow: 0 4px 16px rgba(100,108,255,0.12);
-}
-
 table {
   width: 100%;
+  min-width: 900px;
   border-collapse: collapse;
-  margin-top: 1rem;
   background: #fff;
   border-radius: 12px;
   overflow: hidden;
@@ -77,11 +61,13 @@ table {
 th, td {
   padding: 0.7rem 0.5rem;
   border-bottom: 1px solid #ececf0;
+  vertical-align: middle;
 }
 th {
   background: #f5f5fa;
   font-weight: 600;
   color: #444;
+  min-width: 120px;
 }
 tr:last-child td {
   border-bottom: none;
@@ -90,6 +76,4 @@ tr:nth-child(even) {
   background: #fafaff;
 }
 
-.read-the-docs {
-  color: #888;
 }

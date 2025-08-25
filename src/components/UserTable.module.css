@@ -1,17 +1,23 @@
 .table {
   width: 100%;
+  max-width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
+  word-break: break-word;
 }
 .th, .td {
   border: 1px solid #e0e0e0;
   padding: 0.5rem;
   text-align: left;
+  height: 48px;
 }
 .th {
   background: #f5f5f5;
+  min-width: 120px;
 }
 .tr:nth-child(even) {
   background: #fafafa;
+  height: 48px;
 }
 .imgThumb {
   border-radius: 50%;

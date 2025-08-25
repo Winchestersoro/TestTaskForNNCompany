@@ -9,6 +9,7 @@ export interface User {
   email: string;
   phone: string;
   registered: { date: string };
+  login: { uuid: string };
 }
 
 interface UserTableProps {
@@ -40,8 +41,8 @@ const UserTable: React.FC<UserTableProps> = ({ users }) => {
         </tr>
       </thead>
       <tbody>
-        {users.map((user, idx) => (
-          <tr className={styles.tr} key={idx}>
+        {users.map((user) => (
+          <tr className={styles.tr} key={user.login.uuid}>
             <td className={styles.td}>
               {user.name.first} {user.name.last}
             </td>
